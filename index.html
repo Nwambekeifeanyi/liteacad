@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LiteAcad | Revolutionizing Academic Systems</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <script>
+            tailwind.config = {
+                  theme: {
+                        extend: {
+                              colors: {
+                                    brand: '#001f3f',
+                                    accent: '#ffca28',
+                              }
+                        }
+                  }
+            }
+      </script>
+      <style>
+            .nav-link:hover {
+                  color: #ffca28;
+                  transition: 0.3s;
+            }
+
+            .gradient-bg {
+                  background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+            }
+
+            /* Custom utility to hide scrollbar but keep functionality */
+            .no-scrollbar::-webkit-scrollbar {
+                  display: none;
+            }
+
+            .no-scrollbar {
+                  -ms-overflow-style: none;
+                  scrollbar-width: none;
+            }
+      </style>
+</head>
+
+<body class="font-sans text-gray-900 bg-gray-50 overflow-x-hidden">
+
+      <nav class="fixed w-full z-50 bg-brand text-white shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                  <div class="text-2xl font-bold flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-accent"></i> LiteAcad
+                  </div>
+
+                  <div class="hidden md:flex space-x-8 font-medium">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#services" class="nav-link">Services</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                  </div>
+
+                  <button class="md:hidden text-2xl" id="menu-btn">
+                        <i class="fas fa-bars"></i>
+                  </button>
+            </div>
+
+            <div id="mobile-menu"
+                  class="hidden md:hidden bg-brand border-t border-blue-900 px-6 py-4 flex flex-col space-y-4">
+                  <a href="#home" class="nav-link">Home</a>
+                  <a href="#services" class="nav-link">Services</a>
+                  <a href="#about" class="nav-link">About</a>
+                  <a href="#testimonials" class="nav-link">Testimonials</a>
+                  <a href="#contact" class="nav-link">Contact</a>
+            </div>
+      </nav>
+
+      <section id="home" class="gradient-bg min-h-screen flex items-center pt-28 pb-12 md:pt-20 md:pb-0">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                  <div class="md:w-1/2 text-white" data-aos="fade-right">
+                        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                              Powering the Future of <span class="text-accent">Education</span>
+                        </h1>
+                        <p class="text-lg mb-8 text-gray-300">
+                              Innovative academic software designed to streamline administration and enhance learning
+                              experiences for institutions across Nigeria.
+                        </p>
+                        <!-- <div class="flex flex-nowrap gap-2 md:gap-4">
+                              <a href="#services"
+                                    class="bg-accent text-brand px-4 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-bold hover:scale-105 transition transform whitespace-nowrap">
+                                    Our Products
+                              </a>
+                              <a href="#contact"
+                                    class="border-2 border-white text-white px-4 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-bold hover:bg-white hover:text-brand transition whitespace-nowrap">
+                                    Get Started
+                              </a>
+                        </div> -->
+
+                        <div class="mt-10 w-full max-w-xl pr-6 md:pr-0" data-aos="fade-up" data-aos-delay="200">
+                              <p
+                                    class="text-accent font-semibold mb-3 text-[10px] md:text-xs tracking-[0.2em] uppercase">
+                                    Portal Access</p>
+
+                              <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+
+                                    <a href="#"
+                                          class="flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 py-3 px-2 rounded-lg hover:bg-accent hover:text-brand transition group">
+                                          <i
+                                                class="fas fa-user-graduate mb-1.5 text-base md:text-lg group-hover:scale-110 transition"></i>
+                                          <span class="text-[10px] md:text-xs font-bold whitespace-nowrap">Student
+                                                Login</span>
+                                    </a>
+
+                                    <a href="#"
+                                          class="flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 py-3 px-2 rounded-lg hover:bg-accent hover:text-brand transition group">
+                                          <i
+                                                class="fas fa-user-shield mb-1.5 text-base md:text-lg group-hover:scale-110 transition"></i>
+                                          <span class="text-[10px] md:text-xs font-bold whitespace-nowrap">Admin
+                                                Login</span>
+                                    </a>
+
+                                    <a href="#"
+                                          class="col-span-2 md:col-span-1 flex flex-col items-center justify-center bg-accent text-brand py-3 px-2 rounded-lg hover:shadow-lg transition group">
+                                          <i
+                                                class="fas fa-plus-circle mb-1.5 text-base md:text-lg group-hover:rotate-90 transition"></i>
+                                          <span
+                                                class="text-[10px] md:text-xs font-extrabold uppercase tracking-tighter">Register
+                                                School</span>
+                                    </a>
+
+                              </div>
+                        </div>
+                  </div>
+                  <div class="md:w-1/2 mt-12 md:mt-0" data-aos="zoom-in">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                              alt="Education Tech" class="rounded-2xl shadow-2xl border-4 border-accent">
+                  </div>
+            </div>
+      </section>
+
+      <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                  <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand">Our Innovative Solutions</h2>
+                        <div class="h-1 w-20 bg-accent mx-auto mt-4"></div>
+                  </div>
+
+                  <div class="grid md:grid-cols-3 gap-10">
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up"
+                              data-aos-delay="100">
+                              <div class="text-4xl text-brand mb-6"><i class="fas fa-university"></i></div>
+                              <h3 class="text-2xl font-bold mb-4">School Portal</h3>
+                              <p class="text-gray-600 mb-6">Complete web presence with student management, result
+                                    computation, and fee tracking.</p>
+                              <div class="mb-6 flex gap-4 text-sm font-bold text-brand">
+                                    <span><span class="counter" data-target="150">0</span>+ Schools</span>
+                                    <span><span class="counter" data-target="50000">0</span>+ Students</span>
+                              </div>
+                              <button class="text-accent font-bold hover:underline">Learn More →</button>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-accent" data-aos="fade-up"
+                              data-aos-delay="200">
+                              <div class="text-4xl text-brand mb-6"><i class="fas fa-laptop-code"></i></div>
+                              <h3 class="text-2xl font-bold mb-4">LiteAcad CBT</h3>
+                              <p class="text-gray-600 mb-6">Professional simulation for JAMB, WAEC, and University exams
+                                    tailored for Nigeria.</p>
+                              <div class="mb-6 flex gap-4 text-sm font-bold text-brand">
+                                    <span><span class="counter" data-target="12000">0</span>+ Users</span>
+                                    <span><span class="counter" data-target="45">0</span>+ Subjects</span>
+                              </div>
+                              <button class="bg-brand text-white px-6 py-2 rounded-lg">Try Demo</button>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up"
+                              data-aos-delay="300">
+                              <div class="text-4xl text-brand mb-6"><i class="fas fa-book-reader"></i></div>
+                              <h3 class="text-2xl font-bold mb-4">Digital Library</h3>
+                              <p class="text-gray-600 mb-6">Access all academic materials, lecture notes, and research
+                                    journals in one place.</p>
+                              <div class="mb-6 flex gap-4 text-sm font-bold text-brand">
+                                    <span><span class="counter" data-target="8000">0</span>+ Books</span>
+                                    <span><span class="counter" data-target="25000">0</span>+ Readers</span>
+                              </div>
+                              <button class="text-accent font-bold hover:underline">Explore Library →</button>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <section id="about" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
+                  <div class="md:w-1/2" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                              alt="Our Team" class="rounded-lg shadow-xl">
+                  </div>
+                  <div class="md:w-1/2" data-aos="fade-left">
+                        <h2 class="text-3xl font-bold text-brand mb-6">Why Choose LiteAcad?</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                              LiteAcad is a digital innovative company centered on developing academic software that
+                              bridges the gap between traditional learning and modern technology. We understand the
+                              specific pressures of the Nigerian academic environment and build tools to make running a
+                              school smoother and learning more effective.
+                        </p>
+                        <ul class="space-y-4">
+                              <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent"></i> 24/7
+                                    Support for Institutions</li>
+                              <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent"></i> Robust
+                                    Data Security</li>
+                              <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent"></i>
+                                    User-Friendly Interfaces</li>
+                        </ul>
+                  </div>
+            </div>
+      </section>
+
+
+
+      <section id="testimonials" class="py-20 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-6">
+                  <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl font-bold text-brand">What They Say</h2>
+                        <p class="text-gray-500 mt-2 text-sm md:hidden">Swipe to see more stories</p>
+                  </div>
+
+                  <div
+                        class="flex overflow-x-auto gap-6 pb-8 no-scrollbar snap-x snap-mandatory cursor-grab active:cursor-grabbing">
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"The School Portal
+                                    transformed our result computation from a two-week headache into a 2-hour automated
+                                    process."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                                          SM</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">St. Mary’s Academy</p>
+                                          <p class="text-[10px] text-gray-500">Principal</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"Practicing with the CBT
+                                    platform gave me the confidence to score high in my JAMB. It feels like the real
+                                    thing."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-brand font-bold text-[10px]">
+                                          CN</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">Chidi Nnamdi</p>
+                                          <p class="text-[10px] text-gray-500">Student</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"Managing school fees and
+                                    generating financial reports has never been easier. The transparency is top-notch."
+                              </p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                                          GH</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">Grace High School</p>
+                                          <p class="text-[10px] text-gray-500">Bursar</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"The digital library is a
+                                    lifesaver. I can access lecture notes and past projects right from my phone."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-brand font-bold text-[10px]">
+                                          AO</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">Anita Okon</p>
+                                          <p class="text-[10px] text-gray-500">University Student</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"LiteAcad CBT simulation is
+                                    the most accurate I have used. The interface is perfect for GST exams."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                                          FE</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">Fedor University</p>
+                                          <p class="text-[10px] text-gray-500">GST Dept</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"Our teachers now upload
+                                    assignments and track submissions easily. The admin dashboard is intuitive."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-brand font-bold text-[10px]">
+                                          BS</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">Bright Star Intl</p>
+                                          <p class="text-[10px] text-gray-500">Proprietor</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"The professional school
+                                    website boosted our online reputation. We got more inquiries this year."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                                          LH</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-xs">Lighthouse College</p>
+                                          <p class="text-[10px] text-gray-500">ICT Director</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div
+                              class="w-full shrink-0 md:shrink md:w-[calc(25%-1.125rem)] md:min-w-[calc(25%-1.125rem)] bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent snap-center">
+                              <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-quote-left text-accent text-xl"></i>
+                              </div>
+                              <p class="text-gray-600 italic text-sm mb-6 leading-relaxed">"I highly recommend LiteAcad
+                                    for any school looking to digitize their operations without stress."</p>
+                              <div class="flex items-center gap-3">
+                                    <div
+                                          class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-brand font-bold text-[10px]">
+                                          EU</div>
+                                    <div>
+                                          <p class="font-bold text-brand text-sm">Emeka Uche</p>
+                                          <p class="text-[10px] text-gray-500">Consultant</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+            </div>
+      </section>
+
+      <section id="contact" class="py-20 bg-brand text-white">
+            <div class="container mx-auto px-6">
+                  <div
+                        class="max-w-4xl mx-auto bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-accent p-10 text-brand">
+                              <h3 class="text-2xl font-bold mb-6">Contact Info</h3>
+                              <div class="space-y-6">
+                                    <p><i class="fas fa-phone mr-3"></i> +234 810 000 0000</p>
+                                    <p><i class="fas fa-envelope mr-3"></i> hello@liteacad.com</p>
+                                    <p><i class="fas fa-map-marker-alt mr-3"></i> Abakaliki, Ebonyi State</p>
+                              </div>
+                        </div>
+                        <div class="md:w-2/3 p-10">
+                              <form class="space-y-4">
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                          <input type="text" placeholder="Your Name" class="w-full p-3 border rounded">
+                                          <input type="email" placeholder="Email Address"
+                                                class="w-full p-3 border rounded">
+                                    </div>
+                                    <input type="text" placeholder="Subject" class="w-full p-3 border rounded">
+                                    <textarea placeholder="Message" rows="4"
+                                          class="w-full p-3 border rounded"></textarea>
+                                    <button
+                                          class="bg-brand text-white w-full py-3 rounded-lg font-bold hover:bg-opacity-90">Send
+                                          Message</button>
+                              </form>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <footer class="bg-gray-900 text-gray-400 py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 lg:flex lg:justify-between gap-y-10 gap-x-6">
+            
+            <div class="col-span-2 lg:max-w-xs mb-4 lg:mb-0">
+                <div class="text-white text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i class="fas fa-graduation-cap text-accent"></i> LiteAcad
+                </div>
+                <p class="text-sm leading-relaxed">
+                    Innovating Nigerian education through technology and accessible digital systems. 
+                    Powering the future of academic excellence.
+                </p>
+            </div>
+
+            <div class="col-span-1">
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Support Hub</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-1">
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Products</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-accent transition-colors">School Portal</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">CBT Simulation</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Digital Library</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1 mt-2 lg:mt-0">
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Connect With Us</h4>
+                <div class="flex gap-5 text-xl">
+                    <a href="#" class="hover:text-accent transition-transform hover:-translate-y-1"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-accent transition-transform hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-accent transition-transform hover:-translate-y-1"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-accent transition-transform hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-xs tracking-widest">
+            &copy; 2026 LiteAcad Digital Solutions. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+            AOS.init({ duration: 1000, once: true });
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+            // Counter Animation Logic
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+
+            const startCounters = () => {
+                  counters.forEach(counter => {
+                        const updateCount = () => {
+                              const target = +counter.getAttribute('data-target');
+                              const count = +counter.innerText;
+                              const inc = target / speed;
+
+                              if (count < target) {
+                                    counter.innerText = Math.ceil(count + inc);
+                                    setTimeout(updateCount, 1);
+                              } else {
+                                    counter.innerText = target;
+                              }
+                        };
+                        updateCount();
+                  });
+            };
+
+            // Trigger counters when scrolled into view
+            const observer = new IntersectionObserver((entries) => {
+                  if (entries[0].isIntersecting) startCounters();
+            }, { threshold: 0.5 });
+
+            observer.observe(document.querySelector('#services'));
+      </script>
+</body>
+
+</html>
